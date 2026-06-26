@@ -20,31 +20,38 @@ async function prep(page) {
   await page.addStyleTag({
     content: '.reveal{opacity:1!important;transform:none!important;}',
   })
-  // Lazy-Bilder erzwingen, durchscrollen und auf vollständiges Laden warten
+  // Alle Bilder eager + synchron dekodieren (verhindert leere Bilder auf langen Seiten)
   await page.evaluate(async () => {
-    document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+    document.querySelectorAll('img').forEach((img) => {
       img.loading = 'eager'
+      img.decoding = 'sync'
     })
     await new Promise((r) => {
       let y = 0
       const t = setInterval(() => {
-        window.scrollBy(0, 800)
-        y += 800
-        if (y >= document.body.scrollHeight) {
+        window.scrollBy(0, 400)
+        y += 400
+        if (y >= document.body.scrollHeight * 1.2) {
           clearInterval(t)
           r()
         }
-      }, 50)
+      }, 40)
     })
     window.scrollTo(0, 0)
-    await Promise.all(
-      [...document.images].map((img) =>
-        img.complete ? Promise.resolve() : img.decode().catch(() => {})
-      )
-    )
   })
+  // Warten, bis wirklich JEDES Bild vollständig geladen ist
+  await page
+    .waitForFunction(
+      () => [...document.images].every((img) => img.complete && img.naturalWidth > 0),
+      { timeout: 20000 }
+    )
+    .catch(() => console.warn('  ! Timeout: nicht alle Bilder geladen'))
+  // Jedes Bild explizit dekodieren, damit es im Full-Page-Shot gerendert wird
+  await page.evaluate(() =>
+    Promise.all([...document.images].map((img) => img.decode().catch(() => {})))
+  )
   await page.evaluate(() => document.fonts && document.fonts.ready)
-  await page.waitForTimeout(700)
+  await page.waitForTimeout(500)
 }
 
 for (const s of shots) {
