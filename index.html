@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zuckerwerk · Handgemachte Fake-Süßigkeiten aus Polymer Clay</title>
+  <meta name="description" content="Zuckerwerk – täuschend echte Miniatur-Süßigkeiten, Obst und Backwaren aus Polymer Clay. Handgefertigte Schlüsselanhänger & Deko, liebevoll von Hand modelliert." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%AC%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="brand" href="#top">
+        <span class="brand__mark">🍬</span>
+        <span class="brand__name">Zuckerwerk</span>
+      </a>
+      <nav class="nav__links" aria-label="Hauptnavigation">
+        <a href="#produkte">Kollektion</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#story">Über uns</a>
+        <a href="#manufaktur">Manufaktur</a>
+        <a href="#kontakt" class="nav__cta">Kontakt</a>
+      </nav>
+      <button class="nav__burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__blob hero__blob--1"></div>
+    <div class="hero__blob hero__blob--2"></div>
+    <div class="hero__inner">
+      <div class="hero__text">
+        <span class="hero__eyebrow">Handgemacht · Polymer Clay · Unikate</span>
+        <h1>Süßigkeiten, die man nicht essen darf.</h1>
+        <p class="hero__lead">
+          Täuschend echte Miniatur-Süßigkeiten, Obst und Backwaren – von Hand aus
+          Polymer Clay modelliert. Jedes Stück ein kleines Kunstwerk zum Sammeln,
+          Verschenken und Anschmiegen.
+        </p>
+        <div class="hero__actions">
+          <a href="#produkte" class="btn btn--primary">Kollektion entdecken</a>
+          <a href="#story" class="btn btn--ghost">Unsere Geschichte</a>
+        </div>
+        <div class="hero__badges">
+          <span>🌱 Vegan &amp; tierfrei</span>
+          <span>✋ 100 % handgefertigt</span>
+          <span>🎁 Jedes Stück ein Unikat</span>
+        </div>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <div class="treat treat--donut">🍩</div>
+        <div class="treat treat--cake">🍰</div>
+        <div class="treat treat--candy">🍬</div>
+        <div class="treat treat--straw">🍓</div>
+        <div class="treat treat--croissant">🥐</div>
+        <div class="treat treat--bear">🧸</div>
+        <div class="hero__plate">🫙</div>
+      </div>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>🍩 Donuts</span><span>🥐 Croissants</span><span>🍓 Erdbeeren</span>
+        <span>🍡 Mochi</span><span>🧁 Cupcakes</span><span>🍬 Gummibärchen</span>
+        <span>🥮 Mooncakes</span><span>🍪 Kekse</span><span>🍩 Donuts</span>
+        <span>🥐 Croissants</span><span>🍓 Erdbeeren</span><span>🍡 Mochi</span>
+        <span>🧁 Cupcakes</span><span>🍬 Gummibärchen</span><span>🥮 Mooncakes</span>
+        <span>🍪 Kekse</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produkte / Kategorien -->
+  <section class="section" id="produkte">
+    <div class="section__head reveal">
+      <span class="kicker">Die Kollektion</span>
+      <h2>Drei kleine Welten zum Verlieben</h2>
+      <p>Von der Konditorei bis zum Obstkorb – alles in Miniatur, alles von Hand geformt.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card__emoji">🍬</div>
+        <h3>Fake-Süßigkeiten</h3>
+        <p>Gummibärchen, Bonbons und Lollis in zuckersüßen Farben – glänzend wie frisch ausgepackt.</p>
+        <ul class="card__list">
+          <li>Mini-Gummibärchen</li>
+          <li>Frucht-Bonbons</li>
+          <li>Lollis &amp; Drops</li>
+        </ul>
+      </article>
+      <article class="card reveal">
+        <div class="card__emoji">🍓</div>
+        <h3>Fake-Obst</h3>
+        <p>Erdbeeren, Zitrusscheiben und Beeren mit realistischer Textur und Glanzlackierung.</p>
+        <ul class="card__list">
+          <li>Erdbeeren &amp; Beeren</li>
+          <li>Zitrus &amp; Melone</li>
+          <li>Obstkorb-Sets</li>
+        </ul>
+      </article>
+      <article class="card reveal">
+        <div class="card__emoji">🥐</div>
+        <h3>Fake-Backwaren</h3>
+        <p>Croissants, Churros, Mochi und Mooncakes – goldbraun gebacken, ganz ohne Ofen.</p>
+        <ul class="card__list">
+          <li>Croissants &amp; Churros</li>
+          <li>Mochi &amp; Mooncakes</li>
+          <li>Donuts &amp; Cupcakes</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Galerie -->
+  <section class="section section--alt" id="galerie">
+    <div class="section__head reveal">
+      <span class="kicker">Galerie</span>
+      <h2>Frisch aus der Werkstatt</h2>
+      <p>Ein Blick in unsere Auslage – jedes Stück handmodelliert und liebevoll lackiert.</p>
+    </div>
+    <div class="gallery">
+      <figure class="gallery__item reveal" style="--c1:#f6d7c4;--c2:#e9a87c">
+        <div class="gallery__visual">🥨</div>
+        <figcaption>
+          <strong>Herz-Churro Anhänger</strong>
+          <span>Goldbraun mit Zuckerglanz</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery__item reveal" style="--c1:#fbe7c2;--c2:#e7b563">
+        <div class="gallery__visual">🥮</div>
+        <figcaption>
+          <strong>Mini-Mooncakes</strong>
+          <span>Filigrane Prägung</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery__item reveal" style="--c1:#f9cbd0;--c2:#e58a98">
+        <div class="gallery__visual">🧸</div>
+        <figcaption>
+          <strong>Gummibärchen</strong>
+          <span>Transluzent &amp; glänzend</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery__item reveal" style="--c1:#e7d6f0;--c2:#b692d4">
+        <div class="gallery__visual">🍡</div>
+        <figcaption>
+          <strong>Wagashi &amp; Mochi</strong>
+          <span>Pastell-Trio auf Tellerchen</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery__item reveal" style="--c1:#f6d7c4;--c2:#d89f6b">
+        <div class="gallery__visual">🍩</div>
+        <figcaption>
+          <strong>Churros-Bündel</strong>
+          <span>Mit Zimt-Zucker-Optik</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery__item reveal" style="--c1:#cfe9d6;--c2:#86c79b">
+        <div class="gallery__visual">🍓</div>
+        <figcaption>
+          <strong>Frucht-Charms</strong>
+          <span>Saftig lackiert</span>
+        </figcaption>
+      </figure>
+    </div>
+    <p class="gallery__note reveal">📸 Echte Fotos folgen bald – hier entsteht unsere wachsende Auslage.</p>
+  </section>
+
+  <!-- Story / Über uns -->
+  <section class="section" id="story">
+    <div class="story">
+      <div class="story__art reveal" aria-hidden="true">
+        <div class="story__bubble">🍰</div>
+        <div class="story__bubble">🍡</div>
+        <div class="story__bubble">🍬</div>
+        <div class="story__bubble">🥐</div>
+      </div>
+      <div class="story__text reveal">
+        <span class="kicker">Über uns</span>
+        <h2>Zwei Hände, eine Leidenschaft – und ganz viel Knete</h2>
+        <p>
+          Zuckerwerk ist das gemeinsame Herzensprojekt von uns beiden. Aus der Liebe
+          zu Miniaturen, Farben und süßen Dingen ist eine kleine Manufaktur entstanden,
+          in der wir täuschend echte Süßigkeiten aus Polymer Clay erschaffen.
+        </p>
+        <p>
+          Was als gemütliches Hobby am Küchentisch begann, wird jetzt zu unserem
+          gemeinsamen Business. Jedes Teil entsteht von Hand: geformt, gebacken,
+          bemalt und versiegelt – ohne Gussformen aus der Massenproduktion.
+        </p>
+        <div class="stats">
+          <div class="stat"><strong>100 %</strong><span>handgemacht</span></div>
+          <div class="stat"><strong>0</strong><span>Stück gleichen sich</span></div>
+          <div class="stat"><strong>∞</strong><span>Liebe zum Detail</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manufaktur / Prozess -->
+  <section class="section section--alt" id="manufaktur">
+    <div class="section__head reveal">
+      <span class="kicker">Manufaktur</span>
+      <h2>So entsteht ein Zuckerwerk</h2>
+      <p>Vier Schritte vom Klümpchen Clay zum kleinen Kunstwerk.</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step__num">1</span>
+        <h3>Modellieren</h3>
+        <p>Jede Form wird von Hand aus Polymer Clay geknetet und in Form gebracht.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">2</span>
+        <h3>Backen</h3>
+        <p>Im Ofen härtet die Knete aus und wird robust für den Alltag.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">3</span>
+        <h3>Bemalen</h3>
+        <p>Mit Pastellkreiden und Farben entstehen Bräunungen und realistische Details.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">4</span>
+        <h3>Veredeln</h3>
+        <p>Glanzlack und Anhänger-Verschluss machen jedes Stück zum tragbaren Schmuck.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Kontakt / CTA -->
+  <section class="section" id="kontakt">
+    <div class="contact reveal">
+      <div class="contact__text">
+        <span class="kicker">Sag Hallo</span>
+        <h2>Lust auf ein süßes Unikat?</h2>
+        <p>
+          Wir starten gerade durch! Schreib uns für Bestellungen, Wunschanfertigungen
+          oder einfach, um Teil unserer süßen Reise zu werden.
+        </p>
+        <div class="contact__socials">
+          <a href="#" class="chip">📷 Instagram</a>
+          <a href="#" class="chip">🎵 TikTok</a>
+          <a href="mailto:hallo@zuckerwerk.shop" class="chip">✉️ E-Mail</a>
+        </div>
+      </div>
+      <form class="contact__form" id="contactForm" novalidate>
+        <label>
+          Dein Name
+          <input type="text" name="name" placeholder="Wie heißt du?" required />
+        </label>
+        <label>
+          E-Mail
+          <input type="email" name="email" placeholder="du@beispiel.de" required />
+        </label>
+        <label>
+          Deine Nachricht
+          <textarea name="message" rows="4" placeholder="Erzähl uns von deinem Wunsch …" required></textarea>
+        </label>
+        <button type="submit" class="btn btn--primary">Absenden 🍭</button>
+        <p class="contact__hint" id="formHint" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">🍬</span>
+        <span class="brand__name">Zuckerwerk</span>
+        <p>Handgemachte Fake-Süßigkeiten aus Polymer Clay.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#produkte">Kollektion</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#story">Über uns</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> Zuckerwerk · Mit 🤍 von Hand gemacht. Nicht zum Verzehr geeignet.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
