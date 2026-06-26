@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets'
+import { marquee } from '../data/content.js'
+import heroPhoto from '../assets/products/herz-churro.png'
+---
+
+<section class="hero">
+  <div class="hero__blob hero__blob--1"></div>
+  <div class="hero__blob hero__blob--2"></div>
+  <div class="hero__inner">
+    <div class="hero__text">
+      <span class="hero__eyebrow">Handgemacht · Polymer Clay · Unikate</span>
+      <h1>Süßigkeiten, die man nicht essen darf.</h1>
+      <p class="hero__lead">
+        Täuschend echte Miniatur-Süßigkeiten, Obst und Backwaren – von Hand aus Polymer Clay
+        modelliert. Jedes Stück ein kleines Kunstwerk zum Sammeln, Verschenken und Anschmiegen.
+      </p>
+      <div class="hero__actions">
+        <a href="#produkte" class="btn btn--primary">Kollektion entdecken</a>
+        <a href="#story" class="btn btn--ghost">Unsere Geschichte</a>
+      </div>
+      <div class="hero__badges">
+        <span>🌱 Vegan &amp; tierfrei</span>
+        <span>✋ 100 % handgefertigt</span>
+        <span>🎁 Jedes Stück ein Unikat</span>
+      </div>
+    </div>
+    <div class="hero__art">
+      <div class="hero__photo">
+        <Image
+          src={heroPhoto}
+          alt="Handgemachter Herz-Schlüsselanhänger aus Polymer Clay in Churro-Optik"
+          widths={[400, 700]}
+          sizes="(max-width: 900px) 90vw, 460px"
+          loading="eager"
+        />
+      </div>
+      <div class="treat treat--a" aria-hidden="true">🍩</div>
+      <div class="treat treat--b" aria-hidden="true">🍓</div>
+      <div class="treat treat--c" aria-hidden="true">🧁</div>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      {[...marquee, ...marquee].map((m) => <span>{m}</span>)}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+---
+import { steps } from '../data/content.js'
+---
+
+<section class="section section--alt" id="manufaktur">
+  <div class="section__head reveal">
+    <span class="kicker">Manufaktur</span>
+    <h2>So entsteht ein Zuckerwerk</h2>
+    <p>Vier Schritte vom Klümpchen Clay zum kleinen Kunstwerk.</p>
+  </div>
+  <ol class="steps">
+    {
+      steps.map((s) => (
+        <li class="step reveal">
+          <span class="step__num">{s.num}</span>
+          <h3>{s.title}</h3>
+          <p>{s.text}</p>
+        </li>
+      ))
+    }
+  </ol>
+</section>

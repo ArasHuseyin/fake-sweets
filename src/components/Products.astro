@@ -1,0 +1,27 @@
+---
+import { categories } from '../data/content.js'
+---
+
+<section class="section" id="produkte">
+  <div class="section__head reveal">
+    <span class="kicker">Die Kollektion</span>
+    <h2>Drei kleine Welten zum Verlieben</h2>
+    <p>Von der Konditorei bis zum Obstkorb – alles in Miniatur, alles von Hand geformt.</p>
+  </div>
+  <div class="cards">
+    {
+      categories.map((c) => (
+        <article class="card reveal">
+          <div class="card__emoji">{c.emoji}</div>
+          <h3>{c.title}</h3>
+          <p>{c.text}</p>
+          <ul class="card__list">
+            {c.items.map((it) => (
+              <li>{it}</li>
+            ))}
+          </ul>
+        </article>
+      ))
+    }
+  </div>
+</section>

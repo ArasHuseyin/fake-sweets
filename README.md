@@ -4,35 +4,50 @@ Website für **Zuckerwerk** – handgemachte Fake-Süßigkeiten, Obst und Backwa
 aus Polymer Clay. Täuschend echte Miniaturen als Schlüsselanhänger, Deko und
 Sammlerstücke, von Hand modelliert.
 
-## Inhalt der Seite
+Gebaut mit **[Astro](https://astro.build)** – schnelle, statisch generierte
+Seite mit optimierten Bildern und sauberem SEO-Setup.
 
-- **Hero** – Einstieg mit Slogan und schwebenden Mini-Treats
-- **Kollektion** – drei Kategorien: Fake-Süßigkeiten, Fake-Obst, Fake-Backwaren
-- **Galerie** – Auslage der einzelnen Stücke (Platzhalter für echte Fotos)
-- **Über uns** – die Geschichte hinter dem gemeinsamen Business
-- **Manufaktur** – der Herstellungsprozess in 4 Schritten
-- **Kontakt** – Formular & Social-Links
+## Stack
 
-## Technik
+- **Astro 4** – komponentenbasiert, gibt statisches HTML aus (top für SEO & Speed)
+- **`astro:assets`** – automatische Bildoptimierung (WebP, responsive Größen)
+- **`@astrojs/sitemap`** – Sitemap-Generierung
+- **ESLint + Prettier** – Linting & Formatierung
 
-Reine statische Seite – kein Build-Schritt, keine Abhängigkeiten:
+## Projektstruktur
 
-- `index.html` – Struktur & Inhalt
-- `styles.css` – pastelliges "Candy Shop"-Design, voll responsiv
-- `script.js` – mobile Navigation, Scroll-Animationen, Kontaktformular (Demo)
-
-## Lokal ansehen
-
-Einfach `index.html` im Browser öffnen, oder einen kleinen Server starten:
-
-```bash
-python3 -m http.server 8000
-# dann http://localhost:8000 öffnen
+```
+src/
+  assets/products/   echte Produktfotos (werden optimiert)
+  components/        Nav, Hero, Products, Gallery, Story, Manufaktur, Contact, Footer
+  data/content.js    zentrale Inhalte (Texte, Kategorien, Navigation)
+  layouts/Layout.astro  <head>, Meta/OG/Twitter, JSON-LD
+  pages/index.astro  Startseite + Client-Script
+  styles/global.css  pastelliges "Candy Shop"-Design
+public/              favicon.svg, robots.txt
 ```
 
-## Nächste Schritte
+## Entwicklung
 
-- 📸 Echte Produktfotos in der Galerie ergänzen (ersetzt die Emoji-Platzhalter)
-- 🔗 Instagram-/TikTok-Links eintragen
-- ✉️ Kontaktformular an einen Mail-/Form-Dienst anbinden (z. B. Formspree)
-- 🛒 Optional: Shop-Anbindung (Etsy, Shopify o. Ä.)
+```bash
+npm install
+npm run dev       # Dev-Server auf http://localhost:4321
+npm run build     # Produktions-Build -> dist/
+npm run preview   # Build lokal ansehen
+npm run lint      # ESLint + Prettier-Check
+npm run format    # Prettier-Autoformat
+```
+
+## Screenshots erzeugen
+
+```bash
+npm run build && npm run preview -- --port 4321 &
+node screenshot.mjs
+```
+
+## Offene To-dos (bewusst später)
+
+- ⚖️ Impressum & Datenschutzerklärung (vor dem öffentlichen Launch Pflicht)
+- ✉️ Kontaktformular an echten Dienst anbinden (z. B. Formspree)
+- 🔗 Echte Instagram-/TikTok-Links & finale Domain eintragen
+- 🛒 Verkauf anbinden (Etsy / Shopify)

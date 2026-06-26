@@ -1,0 +1,73 @@
+---
+import { Image } from 'astro:assets'
+import herzChurro from '../assets/products/herz-churro.png'
+import mooncakes from '../assets/products/mooncakes.png'
+import gummibaerchen from '../assets/products/gummibaerchen.png'
+import wagashiMochi from '../assets/products/wagashi-mochi.png'
+import churros from '../assets/products/churros.png'
+
+const items = [
+  {
+    img: herzChurro,
+    title: 'Herz-Churro Anhänger',
+    sub: 'Goldbraun mit Zuckerglanz',
+    alt: 'Herzförmiger Churro-Schlüsselanhänger aus Polymer Clay in der Hand',
+  },
+  {
+    img: mooncakes,
+    title: 'Mini-Mooncakes',
+    sub: 'Filigrane Prägung',
+    alt: 'Mehrere Mini-Mooncakes aus Polymer Clay mit feiner Prägung',
+  },
+  {
+    img: gummibaerchen,
+    title: 'Gummibärchen',
+    sub: 'Transluzent & glänzend',
+    alt: 'Winziges rotes Gummibärchen aus Polymer Clay',
+  },
+  {
+    img: wagashiMochi,
+    title: 'Wagashi & Mochi',
+    sub: 'Pastell-Trio auf Tellerchen',
+    alt: 'Pastellfarbene Mochi und Wagashi auf einem Miniatur-Teller',
+  },
+  {
+    img: churros,
+    title: 'Churros-Bündel',
+    sub: 'Mit Zimt-Zucker-Optik',
+    alt: 'Bündel Mini-Churros aus Polymer Clay als Anhänger in der Hand',
+  },
+]
+---
+
+<section class="section section--alt" id="galerie">
+  <div class="section__head reveal">
+    <span class="kicker">Galerie</span>
+    <h2>Frisch aus der Werkstatt</h2>
+    <p>Ein Blick in unsere Auslage – jedes Stück handmodelliert und liebevoll lackiert.</p>
+  </div>
+  <div class="gallery">
+    {
+      items.map((it) => (
+        <figure class="gallery__item reveal">
+          <div class="gallery__visual">
+            <Image
+              src={it.img}
+              alt={it.alt}
+              widths={[300, 600]}
+              sizes="(max-width: 640px) 90vw, (max-width: 900px) 45vw, 360px"
+              loading="lazy"
+            />
+          </div>
+          <figcaption>
+            <strong>{it.title}</strong>
+            <span>{it.sub}</span>
+          </figcaption>
+        </figure>
+      ))
+    }
+  </div>
+  <p class="gallery__note reveal">
+    ✨ Jedes Stück ist ein handgefertigtes Unikat – kleine Abweichungen machen es einzigartig.
+  </p>
+</section>

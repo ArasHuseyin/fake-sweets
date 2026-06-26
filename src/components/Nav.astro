@@ -1,0 +1,19 @@
+---
+import { navLinks } from '../data/content.js'
+---
+
+<header class="nav" id="top">
+  <div class="nav__inner">
+    <a class="brand" href="#top">
+      <span class="brand__mark">🍬</span>
+      <span class="brand__name">Zuckerwerk</span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Hauptnavigation">
+      {navLinks.map((l) => <a href={l.href}>{l.label}</a>)}
+      <a href="#kontakt" class="nav__cta">Kontakt</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

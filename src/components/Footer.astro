@@ -1,0 +1,20 @@
+---
+import { navLinks } from '../data/content.js'
+const year = new Date().getFullYear()
+---
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <span class="brand__mark">🍬</span>
+      <span class="brand__name">Zuckerwerk</span>
+      <p>Handgemachte Fake-Süßigkeiten aus Polymer Clay.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      {navLinks.map((l) => <a href={l.href}>{l.label}</a>)}
+    </nav>
+  </div>
+  <p class="footer__copy">
+    © {year} Zuckerwerk · Mit 🤍 von Hand gemacht. Nicht zum Verzehr geeignet.
+  </p>
+</footer>

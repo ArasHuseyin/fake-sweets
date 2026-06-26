@@ -1,0 +1,38 @@
+---
+import { site } from '../data/content.js'
+---
+
+<section class="section" id="kontakt">
+  <div class="contact reveal">
+    <div class="contact__text">
+      <span class="kicker">Sag Hallo</span>
+      <h2>Lust auf ein süßes Unikat?</h2>
+      <p>
+        Wir starten gerade durch! Schreib uns für Bestellungen, Wunschanfertigungen oder einfach, um
+        Teil unserer süßen Reise zu werden.
+      </p>
+      <div class="contact__socials">
+        <a href="#" class="chip">📷 Instagram</a>
+        <a href="#" class="chip">🎵 TikTok</a>
+        <a href={`mailto:${site.email}`} class="chip">✉️ E-Mail</a>
+      </div>
+    </div>
+    <form class="contact__form" id="contactForm" novalidate>
+      <label>
+        Dein Name
+        <input type="text" name="name" placeholder="Wie heißt du?" required />
+      </label>
+      <label>
+        E-Mail
+        <input type="email" name="email" placeholder="du@beispiel.de" required />
+      </label>
+      <label>
+        Deine Nachricht
+        <textarea name="message" rows="4" placeholder="Erzähl uns von deinem Wunsch …" required
+        ></textarea>
+      </label>
+      <button type="submit" class="btn btn--primary">Absenden 🍭</button>
+      <p class="contact__hint" id="formHint" role="status"></p>
+    </form>
+  </div>
+</section>
